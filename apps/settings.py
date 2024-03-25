@@ -39,8 +39,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.postgres',
     'rest_framework',
+    'drf_spectacular',
     'apps.users'
 ]
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
 
 AUTH_USER_MODEL = "users.User"
 
@@ -130,3 +136,11 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Car Lover API',
+    'DESCRIPTION': 'The API endpoints for Car Lover project.',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
+}
