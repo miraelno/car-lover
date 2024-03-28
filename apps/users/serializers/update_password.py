@@ -9,6 +9,7 @@ class UpdatePasswordSerializer(serializers.Serializer):
     new_password = serializers.CharField(label=_("Password"),
         style={'input_type': 'password'},trim_whitespace=True,write_only=True)
     
+    # TODO add 'repeat new password' field
     
     def validate_old_password(self, value):
         user = self.context['request'].user

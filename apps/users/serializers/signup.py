@@ -9,6 +9,8 @@ class SignUpSerializer(serializers.ModelSerializer):
     password = serializers.CharField(label=_("Password"),
         style={'input_type': 'password'},trim_whitespace=True,write_only=True)
     
+    # TODO add 'repeat password' field
+    
     class Meta:
         model = User
         fields = [
