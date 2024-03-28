@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from apps.users.models import User
+from django.contrib.auth.password_validation import validate_password
 from django.utils.translation import gettext_lazy as _
 
 
@@ -17,12 +18,15 @@ class SignUpSerializer(serializers.ModelSerializer):
             'last_name',
         ]
         
-    def validate_email(self, email):
-        if User.objects.filter(email=email).exists():
+    def validate_email(self, value):
+        if User.objects.filter(email=value).exists():
             raise serializers.ValidationError("User with such email is already exists.")
-        return email
+        return value
     
-    
+    def validate_password(self, value):
+        validate_password(password=value)
+        return value
+        
     def create(self, validated_data):
         password = validated_data.pop('password')
         new_user = User.objects.create(**validated_data)

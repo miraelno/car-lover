@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from apps.users.models import User
+from django.contrib.auth.password_validation import validate_password
 from django.utils.translation import gettext_lazy as _
 
 
@@ -14,10 +14,14 @@ class UpdatePasswordSerializer(serializers.Serializer):
         user = self.context['request'].user
         if not user.check_password(value):
             raise serializers.ValidationError("Wrong old password.")
+        
         return value
     
-    
+    def validate_new_password(self, value):
+        validate_password(password=value, user=self.context['request'].user)
+        return value
+        
     def update(self, instance, validated_data):
         instance.set_password(validated_data['new_password'])
         instance.save(update_fields=['password', 'updated_at'])
-        return instance
+        return instance.email
