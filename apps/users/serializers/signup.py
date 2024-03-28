@@ -1,10 +1,12 @@
 from rest_framework import serializers
 from apps.users.models import User
+from django.utils.translation import gettext_lazy as _
 
 
 class SignUpSerializer(serializers.ModelSerializer):
-    email = serializers.EmailField(required=True)
-    password = serializers.CharField(required=True)
+    email = serializers.EmailField(required=True,max_length=255)
+    password = serializers.CharField(label=_("Password"),
+        style={'input_type': 'password'},trim_whitespace=True,write_only=True)
     
     class Meta:
         model = User

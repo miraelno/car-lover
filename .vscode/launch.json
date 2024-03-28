@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+
+      {
+        "name": "Run Django",
+        "type": "debugpy",
+        "request": "attach",
+        "pathMappings": [
+          {
+            "localRoot": "${workspaceFolder}",
+            "remoteRoot": "./"
+          }
+        ],
+        "port": 3000,
+        "host": "0.0.0.0",
+      }
+    ]
+  }
