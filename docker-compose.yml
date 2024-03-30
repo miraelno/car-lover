@@ -1,0 +1,32 @@
+version: '3.8'
+
+volumes:
+  pgdbdata:
+    driver: local
+
+services:
+  django:
+    build: .
+    env_file:
+      - .env
+    container_name: django
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports:
+      - 8000:8000
+      - 3000:3000
+    depends_on:
+      - db
+
+  db:
+    image: postgres
+    container_name: db
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdbdata:/var/lib/postgresql/data/
