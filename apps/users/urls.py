@@ -7,7 +7,6 @@ from apps.users.views.update_password import UpdatePasswordView
 from apps.users.views.user_info import UserInfoRetrieveUpdateAPIView
 
 
-
 app_name = 'users'
 
 urlpatterns = [

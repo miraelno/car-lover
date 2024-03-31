@@ -10,8 +10,8 @@ app_name = 'cars'
 
 urlpatterns = [
     path('create/', CreateCarAPIView.as_view(), name='create-car'),
-    path('info/<slug:pk>', CarInfoRetrieveUpdateAPIView.as_view(), name='car-info'),
     path('list/', CarInfoListAPIView.as_view(), name='car-list'),
+    path('info/<slug:pk>', CarInfoRetrieveUpdateAPIView.as_view(), name='car-info'),
     path('change-owner/<slug:pk>', CarOwnerUpdateAPIView.as_view(), name='change-car-owner'),
     path('change-stage/<slug:pk>', StageChangeUpdateAPIView.as_view(), name='change-stage'),
 

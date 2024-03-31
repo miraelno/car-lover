@@ -42,3 +42,5 @@ class User(AbstractBaseUser, PermissionsMixin):
         verbose_name = _("user")
         verbose_name_plural = _("users")
         
+        
+#TODO: add notification settings table
