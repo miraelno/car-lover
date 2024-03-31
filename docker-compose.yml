@@ -18,10 +18,28 @@ services:
       - 3000:3000
     depends_on:
       - db
+      - redis
+
+  celery:
+        build: .
+        container_name: celery
+        command: celery -A apps worker -l INFO
+        volumes:
+            - .:/code
+        depends_on:
+            - django
+            - redis
+
+  redis:
+        image: "redis:alpine"
+        container_name: redis
+        ports:
+            - "6379:6379"
+        command: redis-server --appendonly yes
 
   db:
     image: postgres
-    container_name: db
+    container_name: postgres
     environment:
       POSTGRES_DB: postgres
       POSTGRES_USER: postgres
