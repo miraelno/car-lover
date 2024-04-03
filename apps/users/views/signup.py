@@ -13,5 +13,5 @@ class SignUpView(generics.CreateAPIView):
     
     
     def create(self, request, *args, **kwargs):
-        # task_exec.delay('hello')
+        task_exec.delay('hello')
         return super().create(request, *args, **kwargs)
