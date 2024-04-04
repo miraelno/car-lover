@@ -5,6 +5,7 @@
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
+	box-sizing: border-box;
 	font-family: "Roboto", sans-serif;
 	min-width: 350px;
 	align-items: center;
@@ -15,7 +16,7 @@
 	padding: 0 50px;
 }
 
-.header {
+/* .header {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -38,34 +39,135 @@
 .menu__item {
 	cursor: pointer;
 }
+ */
 
 .main {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
+	min-height: 100vh;
 	border: 1px solid #999;
 	background: url("/img/index__background.jpg") 50%;
-	background-size: cover;
+	background-size: contain;
 }
 .main__form {
 	display: flex;
 	flex-direction: column;
 	max-width: 600px;
 	width: 100%;
-	height: 500px;
-	border: 1px solid #000;
-	margin: 0 auto;
-	margin-top: 50px;
+	height: fit-content;
+	border-radius: 10px;
+	margin: auto;
+	margin-top: 30px;
+	padding: 30px 15px;
+	background-color: #fff;
+	row-gap: 20px;
+	box-sizing: border-box;
 }
+
+.form__title {
+	font-size: 25px;
+	font-weight: 600;
+	letter-spacing: 0.5px;
+	text-align: center;
+	color: #07468d;
+	text-transform: uppercase;
+	transition: all 150ms ease-in-out;
+	cursor: pointer;
+}
+
+.registration:hover,
+.login:hover {
+	color: #fa831b;
+	transition: all 150ms ease-in-out;
+}
+
+.label__title {
+	font-size: 20px;
+	padding-left: 15px;
+}
+
+.aster {
+	color: #fc0324;
+}
+
 .user__name {
+	height: 40px;
+	width: 100%;
+	border: 1px solid #094790;
+	border-radius: 10px;
+	font-size: 20px;
+	padding: 0 15px;
+	margin-top: 10px;
+	transition: all 150ms ease-in-out;
 }
+
+.user__name:focus,
+.user__last-name:focus,
+.user__email:focus,
+.user__password:focus,
+.user__confirm-password:focus {
+	box-shadow: 1px 1px 7px #094790;
+	transition: all 150ms ease-in-out;
+}
+
+.user__name::placeholder {
+	color: #999;
+}
+
 .user__last-name {
+	height: 40px;
+	width: 100%;
+	border: 1px solid #094790;
+	border-radius: 10px;
+	font-size: 20px;
+	padding: 0 15px;
+	margin-top: 10px;
 }
-.user__emal {
+.user__email {
+	height: 40px;
+	width: 100%;
+	border: 1px solid #094790;
+	border-radius: 10px;
+	font-size: 20px;
+	padding: 0 15px;
+	margin-top: 10px;
 }
 .user__password {
+	height: 40px;
+	width: 100%;
+	border: 1px solid #094790;
+	border-radius: 10px;
+	font-size: 20px;
+	padding: 0 15px;
+	margin-top: 10px;
 }
 .user__confirm-password {
+	height: 40px;
+	width: 100%;
+	border: 1px solid #094790;
+	border-radius: 10px;
+	font-size: 20px;
+	padding: 0 15px;
+	margin-top: 10px;
 }
 .form__button {
+	height: 40px;
+	width: 100%;
+	border-radius: 10px;
+	font-size: 20px;
+	padding: 0 15px;
+	margin-top: 10px;
+	background-color: #07468d;
+	color: #fff;
+	transition: all 150ms ease-in-out;
+}
+
+.form__button:hover {
+	transition: all 150ms ease-in-out;
+	background-color: #ee9600;
+}
+
+.hidden {
+	display: none;
 }
