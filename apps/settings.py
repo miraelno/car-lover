@@ -159,9 +159,8 @@ SPECTACULAR_SETTINGS = {
 CELERY_BROKER_URL = "redis://redis:6379"
 CELERY_RESULT_BACKEND = "redis://redis:6379"
 
-
-EMAIL_HOST = 'smtp.mailersend.net'
-EMAIL_USE_TLS = True
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'MS_RqggAl@trial-v69oxl5yxnd4785k.mlsender.net'
-EMAIL_HOST_PASSWORD = 'Hj7TVNf2pHqISXNt'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# EMAIL_HOST = 'smtp.mailersend.net'
+# EMAIL_USE_TLS = True
+# EMAIL_PORT = 587
+EMAIL_HOST_USER = 'carlover@support.com'
