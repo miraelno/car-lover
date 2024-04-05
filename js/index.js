@@ -16,6 +16,7 @@ const userLastName = document.getElementById('user_last-name');
 const userEmail = document.getElementById('user__email');
 const userPassword = document.getElementById('user__password');
 const userConfirmPassword = document.getElementById('user__confirm-password');
+const aster = document.querySelectorAll('.aster');
 
 //this function switches to registration form
 const swToreg = () => {
@@ -26,6 +27,9 @@ regBtn.classList.remove('hidden');
 logBtn.classList.add('hidden');
 regSw.classList.add('selected__switch');
 logSw.classList.remove('selected__switch');
+aster.forEach(elem => {
+	elem.innerText = '*';
+});
 }
 
 //this function switches to login form
@@ -37,6 +41,9 @@ regBtn.classList.add('hidden');
 logBtn.classList.remove('hidden');
 logSw.classList.add('selected__switch');
 regSw.classList.remove('selected__switch');
+aster.forEach(elem => {
+	elem.innerText = '';
+});
 }
 
 regSw.addEventListener('click', swToreg);

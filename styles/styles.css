@@ -12,8 +12,8 @@
 }
 
 .content {
-	max-width: 1400px;
-	padding: 0 50px;
+	/* max-width: 1400px; */
+	padding: 0 30px;
 }
 
 /* .header {
@@ -184,4 +184,5 @@
 
 .selected__switch {
 	color: #fa831b;
+	text-decoration: underline;
 }

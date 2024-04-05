@@ -18,28 +18,33 @@
 		<h2 class="form__title"><span class="registration" id="registration">Registration</span> / <span class="login selected__switch" id="login">Login</span></h2>
 		<!--Name-->
 		<label for="user__name" class="hidden" id="label__name">
-			<span class="label__title">Name</span> <span class="aster">*</span>
-			<input type="text" class="user__name" id="user__name" placeholder="Input name" name="user__name" required>
+			<span class="label__title">Name</span> <span class="aster"></span>
+			<input type="text" class="user__name" id="user__name" placeholder="Input name" name="user__name">
+			<div class="error__row" id="name__error"></div>
 		</label>
 		<!--Last name-->
 		<label for="user__last-name" class="hidden" id="label__last-name">
-			<span class="label__title">Last Name</span> <span class="aster">*</span>
-			<input type="text" class="user__last-name" id="user__last-name" placeholder="Input last name" name="user__last-name" required>
+			<span class="label__title">Last Name</span> <span class="aster"></span>
+			<input type="text" class="user__last-name" id="user__last-name" placeholder="Input last name" name="user__last-name">
+			<div class="error__row" id="last__name-error"></div>
 		</label>
 		<!--Email-->
 		<label for="user__email">
-			<span class="label__title">Email</span> <span class="aster">*</span>
-			<input type="email" class="user__email" id="user__email" placeholder="Input email" name="user__email" required>
+			<span class="label__title">Email</span> <span class="aster"></span>
+			<input type="email" class="user__email" id="user__email" placeholder="Input email" name="user__email">
+			<div class="error__row" id="email__error"></div>
 		</label>
 		<!--Password-->
 		<label for="user__password">
-			<span class="label__title">Password</span> <span class="aster">*</span>
-			<input type="password" class="user__password" id="user__password" placeholder="Input Password" name="user__password" required>
+			<span class="label__title">Password</span> <span class="aster"></span>
+			<input type="password" class="user__password" id="user__password" placeholder="Input Password" name="user__password">
+			<div class="error__row" id="password__error"></div>
 		</label>
 		<!--Confirm password-->
 		<label for="user__confirm-password" class="hidden" id="label__confirm-password">
-			<span class="label__title">Confirm password</span> <span class="aster">*</span>
-			<input type="password" class="user__confirm-password" id="user__confirm-password" placeholder="Confirm password" name="user__confirm-password" required>
+			<span class="label__title">Confirm password</span> <span class="aster"></span>
+			<input type="password" class="user__confirm-password" id="user__confirm-password" placeholder="Confirm password" name="user__confirm-password">
+			<div class="error__row" id="confirm__password-error"></div>
 		</label>
 		<!--Registration button-->
 		<button class="form__button hidden" id="registration__button" type="submit">Registration</button>
