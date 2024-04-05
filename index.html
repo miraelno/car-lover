@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="img/favicon.ico">
 	<link rel="stylesheet" href="styles/styles.css">
 	<title>Car-Lover</title>
 </head>
@@ -13,40 +14,41 @@
 <!--Main-->
 <main class="main content">
 	<!--Login/Registration form-->
-	<form action="#" class = "main__form">
-		<h2 class="form__title"><span class="registration" id="registration">Registration</span> / <span class="login" id="login">Login</span></h2>
+	<form action="https://github.com/miraelno/car-lover" class = "main__form">
+		<h2 class="form__title"><span class="registration" id="registration">Registration</span> / <span class="login selected__switch" id="login">Login</span></h2>
 		<!--Name-->
-		<label for="user__name">
+		<label for="user__name" class="hidden" id="label__name">
 			<span class="label__title">Name</span> <span class="aster">*</span>
-			<input type="text" class="user__name" placeholder="Input name" name="user__name" required>
+			<input type="text" class="user__name" id="user__name" placeholder="Input name" name="user__name" required>
 		</label>
 		<!--Last name-->
-		<label for="user__last-name">
+		<label for="user__last-name" class="hidden" id="label__last-name">
 			<span class="label__title">Last Name</span> <span class="aster">*</span>
-			<input type="text" class="user__last-name" placeholder="Input last name" name="user__last-name" required>
+			<input type="text" class="user__last-name" id="user__last-name" placeholder="Input last name" name="user__last-name" required>
 		</label>
 		<!--Email-->
 		<label for="user__email">
 			<span class="label__title">Email</span> <span class="aster">*</span>
-			<input type="email" class="user__email" placeholder="Input email" name="user__email" required>
+			<input type="email" class="user__email" id="user__email" placeholder="Input email" name="user__email" required>
 		</label>
 		<!--Password-->
-		<label for="user__name">
+		<label for="user__password">
 			<span class="label__title">Password</span> <span class="aster">*</span>
-			<input type="password" class="user__password" placeholder="Input Password" name="user__password" required>
+			<input type="password" class="user__password" id="user__password" placeholder="Input Password" name="user__password" required>
 		</label>
 		<!--Confirm password-->
-		<label for="user__name">
+		<label for="user__confirm-password" class="hidden" id="label__confirm-password">
 			<span class="label__title">Confirm password</span> <span class="aster">*</span>
-			<input type="password" class="user__confirm-password" placeholder="Confirm password" name="user__confirm-password" required>
+			<input type="password" class="user__confirm-password" id="user__confirm-password" placeholder="Confirm password" name="user__confirm-password" required>
 		</label>
 		<!--Registration button-->
-		<button class="form__button" type="submit">Registration</button>
+		<button class="form__button hidden" id="registration__button" type="submit">Registration</button>
 		<!--Login buton-->
-		<button class="form__button" type="submit">Login</button>
+		<button class="form__button" id="login__button" type="submit">Login</button>
 	</form>
 </main>
 
 	</div>
+	<script src="js/index.js"></script>
 </body>
 </html>

@@ -57,8 +57,7 @@
 	width: 100%;
 	height: fit-content;
 	border-radius: 10px;
-	margin: auto;
-	margin-top: 30px;
+	margin: 30px auto;
 	padding: 30px 15px;
 	background-color: #fff;
 	row-gap: 20px;
@@ -160,14 +159,29 @@
 	margin-top: 10px;
 	background-color: #07468d;
 	color: #fff;
-	transition: all 150ms ease-in-out;
+	transition: all 100ms ease-in;
 }
 
 .form__button:hover {
-	transition: all 150ms ease-in-out;
+	transition: all 100ms ease-in;
 	background-color: #ee9600;
+}
+
+.form__button:active {
+	background-color: #cc5600;
+	transition: all 50ms ease-in;
 }
 
 .hidden {
 	display: none;
+}
+
+.valid__error {
+	border: 1px solid #fc0324;
+	box-shadow: 1px 1px 7px #fc0324;
+	transition: all 150ms ease-in;
+}
+
+.selected__switch {
+	color: #fa831b;
 }
