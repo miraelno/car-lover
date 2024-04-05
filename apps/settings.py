@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'apps.cars',
     'apps.users',
     'apps.stages',
+    'apps.documents',
 ]
 
 
@@ -164,3 +165,5 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # EMAIL_USE_TLS = True
 # EMAIL_PORT = 587
 EMAIL_HOST_USER = 'carlover@support.com'
+
+MEDIA_ROOT = BASE_DIR / 'media'
