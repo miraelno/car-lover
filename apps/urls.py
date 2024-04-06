@@ -27,6 +27,7 @@ urlpatterns = [
     path('api/', include('apps.users.urls', namespace='users')),
     path('api/car/', include('apps.cars.urls', namespace='cars')),
     path('api/', include('apps.documents.urls', namespace='documents')),
+    path('api/', include('apps.images.urls', namespace='images')),
     #Swagger
     path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
     path('swagger/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
