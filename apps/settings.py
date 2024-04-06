@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'apps.users',
     'apps.stages',
     'apps.documents',
+    'apps.images',
 ]
 
 
@@ -167,3 +168,4 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 EMAIL_HOST_USER = 'carlover@support.com'
 
 MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_URL = '/media/'
