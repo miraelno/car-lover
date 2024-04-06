@@ -33,6 +33,11 @@ class ImageViewSet(ModelViewSet):
     
     def retrieve(self, request, *args, **kwargs):
         queryset = self.get_queryset()
+        stage = self.request.query_params.get('stage')
+        
+        if stage is not None:
+            queryset = queryset.filter(stage=stage)
+            
         serializer = ListImageSerializer(queryset, many=True)
         return Response(serializer.data)
         

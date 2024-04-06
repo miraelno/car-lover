@@ -2,7 +2,7 @@ from django.urls import path
 from django.urls import include
 
 from rest_framework import routers
-from apps.images.views import ImageViewSet
+from apps.images.views.image_viewset import ImageViewSet
 
 app_name = 'images'
 
