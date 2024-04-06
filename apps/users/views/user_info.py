@@ -1,6 +1,6 @@
 from rest_framework import generics
+
 from apps.users.serializers.user_info import UserInformationSerializer
-from apps.users.models import User
 
 
 class UserInfoRetrieveUpdateAPIView(generics.RetrieveUpdateAPIView):

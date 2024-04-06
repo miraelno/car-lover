@@ -1,9 +1,9 @@
 from django.urls import path
 
-from apps.cars.views.create_car import CreateCarAPIView
-from apps.cars.views.car_info import CarInfoRetrieveUpdateAPIView
 from apps.cars.views.car_info import CarInfoListAPIView
+from apps.cars.views.car_info import CarInfoRetrieveUpdateAPIView
 from apps.cars.views.change_car_owner import CarOwnerUpdateAPIView
+from apps.cars.views.create_car import CreateCarAPIView
 from apps.cars.views.stage_change import StageChangeUpdateAPIView
 
 app_name = "cars"

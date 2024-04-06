@@ -1,7 +1,8 @@
 from rest_framework import serializers
+
 from apps.cars.models import Car
-from apps.users.models import User
 from apps.stages.models import Stage
+from apps.users.models import User
 
 
 class CreateCarSerializer(serializers.ModelSerializer):

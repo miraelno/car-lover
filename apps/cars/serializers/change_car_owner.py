@@ -1,5 +1,6 @@
-from rest_framework import serializers
 import uuid
+
+from rest_framework import serializers
 
 from apps.cars.models import Car
 from apps.users.models import User

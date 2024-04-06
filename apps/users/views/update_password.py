@@ -1,9 +1,7 @@
 from drf_spectacular.utils import extend_schema
 from rest_framework import generics
+
 from apps.users.serializers.update_password import UpdatePasswordSerializer
-from rest_framework.permissions import AllowAny
-from apps.users.models import User
-from rest_framework.response import Response
 
 
 @extend_schema(tags=["Users"])

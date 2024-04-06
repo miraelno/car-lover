@@ -1,8 +1,9 @@
-from rest_framework import serializers
-from apps.users.models import User
-from django.contrib.auth.tokens import default_token_generator
 from django.contrib.auth.password_validation import validate_password
+from django.contrib.auth.tokens import default_token_generator
 from django.utils.translation import gettext_lazy as _
+from rest_framework import serializers
+
+from apps.users.models import User
 from apps.users.tasks import send_confirmation_email
 
 

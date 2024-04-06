@@ -1,6 +1,7 @@
-from rest_framework import serializers
-from apps.documents.models import Document
 from django.conf import settings
+from rest_framework import serializers
+
+from apps.documents.models import Document
 
 
 class ListDocumentSerializer(serializers.ModelSerializer):

@@ -1,7 +1,7 @@
-from rest_framework import serializers
-from apps.documents.models import Document
 from django.core.files.storage import FileSystemStorage
-from django.conf import settings
+from rest_framework import serializers
+
+from apps.documents.models import Document
 
 
 class UploadDocumentSerializer(serializers.ModelSerializer):

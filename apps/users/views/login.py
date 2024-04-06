@@ -1,10 +1,10 @@
-from rest_framework.views import APIView
+from drf_spectacular.utils import extend_schema
+from rest_framework.authtoken.models import Token
 from rest_framework.permissions import AllowAny
+from rest_framework.response import Response
+from rest_framework.views import APIView
 
 from apps.users.serializers.login import LoginSerializer
-from rest_framework.authtoken.models import Token
-from rest_framework.response import Response
-from drf_spectacular.utils import extend_schema
 
 
 @extend_schema(tags=["Users"])

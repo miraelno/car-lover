@@ -1,8 +1,9 @@
 from drf_spectacular.utils import extend_schema
 from rest_framework import generics
-from apps.users.serializers.signup import SignUpSerializer
 from rest_framework.permissions import AllowAny
+
 from apps.users.models import User
+from apps.users.serializers.signup import SignUpSerializer
 
 
 @extend_schema(tags=["Users"])

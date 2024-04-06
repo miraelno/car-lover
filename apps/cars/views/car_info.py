@@ -1,7 +1,8 @@
 from rest_framework import generics
+from rest_framework.response import Response
+
 from apps.cars.models import Car
 from apps.cars.serializers.car_info import CarInformationSerializer
-from rest_framework.response import Response
 
 
 class CarInfoRetrieveUpdateAPIView(generics.RetrieveUpdateAPIView):

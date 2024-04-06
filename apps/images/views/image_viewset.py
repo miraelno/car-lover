@@ -1,14 +1,12 @@
-from rest_framework.parsers import FormParser, MultiPartParser
-from rest_framework.response import Response
-from rest_framework import status
-from django.conf import settings
-
-from rest_framework.viewsets import ModelViewSet
-from apps.images.models import Image
 from django.core.files.storage import FileSystemStorage
+from rest_framework.parsers import FormParser
+from rest_framework.parsers import MultiPartParser
+from rest_framework.response import Response
+from rest_framework.viewsets import ModelViewSet
 
-from apps.images.serializers.upload_delete_image import UploadDeleteImageSerializer
+from apps.images.models import Image
 from apps.images.serializers.list_image import ListImageSerializer
+from apps.images.serializers.upload_delete_image import UploadDeleteImageSerializer
 
 
 class ImageViewSet(ModelViewSet):

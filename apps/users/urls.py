@@ -1,12 +1,11 @@
 from django.urls import path
 
-from apps.users.views.signup import SignUpView
+from apps.users.views.confirm_email import EmailConfirmationView
 from apps.users.views.login import LoginAPIView
 from apps.users.views.logout import LogoutAPIView
+from apps.users.views.signup import SignUpView
 from apps.users.views.update_password import UpdatePasswordView
 from apps.users.views.user_info import UserInfoRetrieveUpdateAPIView
-from apps.users.views.confirm_email import EmailConfirmationView
-
 
 app_name = "users"
 

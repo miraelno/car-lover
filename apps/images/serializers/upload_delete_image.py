@@ -1,8 +1,8 @@
-from rest_framework import serializers
-from apps.images.models import Image
-from apps.cars.models import Car
 from django.core.files.storage import FileSystemStorage
-from django.conf import settings
+from rest_framework import serializers
+
+from apps.cars.models import Car
+from apps.images.models import Image
 
 
 class UploadDeleteImageSerializer(serializers.ModelSerializer):
