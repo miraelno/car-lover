@@ -7,13 +7,11 @@ from apps import settings
 
 @shared_task()
 def send_confirmation_email(email, user_id, token_id):
-    data = {
-        'user_id': str(user_id),
-        'token_id': str(token_id)
-    }
-    message = get_template('emails/confirmation_email.txt').render(data)
+    data = {"user_id": str(user_id), "token_id": str(token_id)}
+    message = get_template("emails/confirmation_email.txt").render(data)
     send_mail(
-        subject='Email confirmation',
+        subject="Email confirmation",
         message=message,
         from_email=settings.EMAIL_HOST_USER,
-        recipient_list=[email])
+        recipient_list=[email],
+    )

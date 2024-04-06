@@ -10,12 +10,14 @@ from apps.users.managers import CustomUserManager
 
 
 class User(AbstractBaseUser, PermissionsMixin):
-    
-    id = models.UUIDField(_('id'), primary_key=True, default=uuid.uuid4)
+
+    id = models.UUIDField(_("id"), primary_key=True, default=uuid.uuid4)
     email = models.EmailField(_("email address"), unique=True)
-    first_name = models.CharField(_("first name"), max_length=150, blank=True, default='')
-    last_name = models.CharField(_("last name"), max_length=150, blank=True, default='')
-    phone = models.CharField(_("phone number"), max_length=15, blank=True, default='')
+    first_name = models.CharField(
+        _("first name"), max_length=150, blank=True, default=""
+    )
+    last_name = models.CharField(_("last name"), max_length=150, blank=True, default="")
+    phone = models.CharField(_("phone number"), max_length=15, blank=True, default="")
     is_staff = models.BooleanField(
         _("staff status"),
         default=False,
@@ -30,17 +32,17 @@ class User(AbstractBaseUser, PermissionsMixin):
         ),
     )
     date_joined = models.DateTimeField(_("date joined"), default=timezone.now)
-    updated_at = models.DateTimeField(_('updated'), auto_now=True)
-    is_email_verified = models.BooleanField(_('email verified'), default=False)
-    
+    updated_at = models.DateTimeField(_("updated"), auto_now=True)
+    is_email_verified = models.BooleanField(_("email verified"), default=False)
+
     objects = CustomUserManager()
-    
+
     USERNAME_FIELD = "email"
     EMAIL_FIELD = "email"
 
     class Meta:
         verbose_name = _("user")
         verbose_name_plural = _("users")
-        
-        
-#TODO: add notification settings table
+
+
+# TODO: add notification settings table

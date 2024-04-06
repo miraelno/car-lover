@@ -11,27 +11,48 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('stages', '0001_initial'),
+        ("stages", "0001_initial"),
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Car',
+            name="Car",
             fields=[
-                ('id', models.UUIDField(default=uuid.uuid4, primary_key=True, serialize=False, verbose_name='id')),
-                ('model', models.CharField(max_length=150, verbose_name='model')),
-                ('vin_code', models.CharField(max_length=150, verbose_name='vin code')),
-                ('number', models.CharField(max_length=20, verbose_name='number')),
-                ('registration_date', models.DateField()),
-                ('mileage', models.CharField(max_length=20, verbose_name='mileage')),
-                ('stage', models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='stages.stage')),
-                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+                (
+                    "id",
+                    models.UUIDField(
+                        default=uuid.uuid4,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="id",
+                    ),
+                ),
+                ("model", models.CharField(max_length=150, verbose_name="model")),
+                ("vin_code", models.CharField(max_length=150, verbose_name="vin code")),
+                ("number", models.CharField(max_length=20, verbose_name="number")),
+                ("registration_date", models.DateField()),
+                ("mileage", models.CharField(max_length=20, verbose_name="mileage")),
+                (
+                    "stage",
+                    models.ForeignKey(
+                        null=True,
+                        on_delete=django.db.models.deletion.SET_NULL,
+                        to="stages.stage",
+                    ),
+                ),
+                (
+                    "user",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'car',
-                'verbose_name_plural': 'cars',
-                'db_table': 'car',
+                "verbose_name": "car",
+                "verbose_name_plural": "cars",
+                "db_table": "car",
             },
         ),
     ]

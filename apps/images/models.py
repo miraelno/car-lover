@@ -11,8 +11,8 @@ class Image(models.Model):
     car = models.ForeignKey(Car, on_delete=models.CASCADE)
     stage = models.ForeignKey(Stage, on_delete=models.DO_NOTHING)
     uploaded_on = models.DateTimeField(auto_now_add=True)
-    
+
     class Meta:
         verbose_name = _("image")
         verbose_name_plural = _("images")
-        db_table = 'images'
+        db_table = "images"

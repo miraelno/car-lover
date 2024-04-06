@@ -14,6 +14,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
 from django.contrib import admin
 from django.urls import path
 from django.urls import include
@@ -23,15 +24,17 @@ from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('api/', include('apps.users.urls', namespace='users')),
-    path('api/car/', include('apps.cars.urls', namespace='cars')),
-    path('api/', include('apps.documents.urls', namespace='documents')),
-    path('api/', include('apps.images.urls', namespace='images')),
-    #Swagger
-    path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
-    path('swagger/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
+    path("admin/", admin.site.urls),
+    path("api/", include("apps.users.urls", namespace="users")),
+    path("api/car/", include("apps.cars.urls", namespace="cars")),
+    path("api/", include("apps.documents.urls", namespace="documents")),
+    path("api/", include("apps.images.urls", namespace="images")),
+    # Swagger
+    path("api/schema/", SpectacularAPIView.as_view(), name="schema"),
+    path(
+        "swagger/", SpectacularSwaggerView.as_view(url_name="schema"), name="swagger-ui"
+    ),
 ]
 
-#Media files
+# Media files
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

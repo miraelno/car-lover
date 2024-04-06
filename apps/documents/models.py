@@ -8,11 +8,10 @@ class Document(models.Model):
     name = models.CharField(max_length=255)
     file = models.FilePathField()
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
-    #TODO: enum of document categories
+    # TODO: enum of document categories
     uploaded_on = models.DateTimeField(auto_now_add=True)
-    
-    
+
     class Meta:
         verbose_name = _("document")
         verbose_name_plural = _("documents")
-        db_table = 'document'
+        db_table = "document"

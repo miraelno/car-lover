@@ -8,6 +8,6 @@ from apps.cars.serializers.stage_change import StageChangeSerializer
 
 class StageChangeUpdateAPIView(generics.UpdateAPIView):
     queryset = Car.objects.all()
-    lookup_field = 'pk'
+    lookup_field = "pk"
     serializer_class = StageChangeSerializer
     permission_classes = [IsAdminUser]

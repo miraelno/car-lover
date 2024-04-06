@@ -9,23 +9,36 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('cars', '0004_remove_car_registration_date'),
+        ("cars", "0004_remove_car_registration_date"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Image',
+            name="Image",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=255)),
-                ('file', models.FilePathField()),
-                ('uploaded_on', models.DateTimeField(auto_now_add=True)),
-                ('car', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='cars.car')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=255)),
+                ("file", models.FilePathField()),
+                ("uploaded_on", models.DateTimeField(auto_now_add=True)),
+                (
+                    "car",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE, to="cars.car"
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'image',
-                'verbose_name_plural': 'images',
-                'db_table': 'images',
+                "verbose_name": "image",
+                "verbose_name_plural": "images",
+                "db_table": "images",
             },
         ),
     ]

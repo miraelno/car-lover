@@ -15,22 +15,21 @@ class DocumentViewSet(ModelViewSet):
     parser_classes = (MultiPartParser, FormParser)
     serializer_class = UploadDocumentSerializer
     queryset = Document.objects.all()
-    
-    
+
     def get_serializer_class(self):
         match self.action:
-            case 'list':
+            case "list":
                 return ListDocumentSerializer
             case _:
                 return super().get_serializer_class()
-    
+
     def get_queryset(self):
         match self.action:
-            case 'list' | 'destroy' :
+            case "list" | "destroy":
                 return Document.objects.filter(owner=self.request.user)
             case _:
                 return super().get_queryset()
-    
+
     def perform_destroy(self, instance):
         fs = FileSystemStorage()
         fs.delete(instance.name)

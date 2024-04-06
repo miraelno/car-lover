@@ -4,13 +4,10 @@ from django.urls import include
 from rest_framework import routers
 from apps.images.views.image_viewset import ImageViewSet
 
-app_name = 'images'
+app_name = "images"
 
 
 router = routers.SimpleRouter()
-router.register(r'image', ImageViewSet, basename='Image')
+router.register(r"image", ImageViewSet, basename="Image")
 
-urlpatterns = [
-    path('', include(router.urls))
-]
-
+urlpatterns = [path("", include(router.urls))]

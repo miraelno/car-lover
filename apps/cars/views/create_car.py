@@ -6,7 +6,8 @@ from rest_framework.response import Response
 from apps.cars.models import Car
 from apps.cars.serializers.create_car import CreateCarSerializer
 
-#TODO: add email notification 
+# TODO: add email notification
+
 
 class CreateCarAPIView(generics.CreateAPIView):
     queryset = Car.objects.all()

@@ -7,8 +7,8 @@ class Stage(models.Model):
 
     def __str__(self):
         return self.name
-    
+
     class Meta:
         verbose_name = _("stage")
         verbose_name_plural = _("stages")
-        db_table = 'stage'
+        db_table = "stage"

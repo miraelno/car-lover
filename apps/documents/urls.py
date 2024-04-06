@@ -4,12 +4,9 @@ from django.urls import include
 from rest_framework import routers
 from apps.documents.views.document_viewset import DocumentViewSet
 
-app_name = 'documents'
+app_name = "documents"
 
 router = routers.SimpleRouter()
-router.register(r'document', DocumentViewSet, basename='Document')
+router.register(r"document", DocumentViewSet, basename="Document")
 
-urlpatterns = [
-    path('', include(router.urls))
-]
-
+urlpatterns = [path("", include(router.urls))]

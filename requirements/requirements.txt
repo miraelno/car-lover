@@ -4,3 +4,5 @@ psycopg2-binary==2.9.9
 drf-spectacular==0.27.1
 debugpy==1.8.1
 celery[redis]==5.3.6
+black==24.3.0
+isort==5.13.2

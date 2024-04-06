@@ -5,12 +5,11 @@ from rest_framework.permissions import AllowAny
 from apps.users.models import User
 
 
-@extend_schema(tags=['Users'])
+@extend_schema(tags=["Users"])
 class SignUpView(generics.CreateAPIView):
     queryset = User.objects.all()
     serializer_class = SignUpSerializer
     permission_classes = [AllowAny]
-    
-    
+
     def create(self, request, *args, **kwargs):
         return super().create(request, *args, **kwargs)
