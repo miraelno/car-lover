@@ -6,3 +6,4 @@ debugpy==1.8.1
 celery[redis]==5.3.6
 black==24.3.0
 isort==5.13.2
+django-cors-headers==4.3.1

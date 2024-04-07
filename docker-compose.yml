@@ -6,7 +6,8 @@ volumes:
 
 services:
   django:
-    build: .
+    build: 
+      context: .
     env_file:
       - .env
     container_name: django
@@ -19,6 +20,15 @@ services:
     depends_on:
       - db
       - redis
+
+  client:
+      build:
+        context: src
+        dockerfile: Dockerfile
+      ports:
+          - 80:80
+      volumes:
+          - ./src:/usr/share/nginx/html
 
   celery:
         build: .
