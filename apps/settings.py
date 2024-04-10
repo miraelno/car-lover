@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     "apps.stages",
     "apps.documents",
     "apps.images",
+    "apps.schedule",
 ]
 
 
