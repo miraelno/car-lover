@@ -3,10 +3,123 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../styles/user_page_styles.css">
 	<title>User page</title>
 </head>
 <body>
-	<h1>User Page</h1>
-	
+	<!--Wrapper-->
+	<div class="wrapper">
+		<header class="header">
+			<!--Menu-->
+			<nav class="header__menu container">
+				<img src="../img/burger.svg" alt="#" class="burger__btn" id="burger__btn">
+				<ul class="menu__list">
+					<li class="menu__item"><a href="user_page.html" class="checked__menu">User profile</a></li>
+					<li class="menu__item"><a href="user_stages.html">Stages</a></li>
+					<li class="menu__item"><a href="user_photos.html">Photos</a></li>
+					<li class="menu__item"><a href="user_docs.html">Documents</a></li>
+					<li class="menu__item"><a href="user_cars.html">Cars</a></li>
+					<li class="menu__item"><a href="user_schedule.html">Schedule</a></li>
+					<li class="menu__item">Autorisation</li>
+				</ul>
+			</nav>
+		</header>
+		<!--Main-->
+		<main class="main">
+			<div class="title__around" ><h1 class="main__title">User Profile</h1></div>
+				<!--Main Row-->
+			<div class="main__row">							
+		<div class="main__data container">
+
+			<!--User information form-->
+			<form action="#" class="user__form">
+			<h2 class="form__title">Welcome <span id="usr__name"></span></h2>
+			<!--Name-->
+			<label for="user__name-info" class="label__item">
+				<span class="label__span">User name: </span>
+				<input type="text" class="input__item" id="user__name-info" value="User" readonly>
+				<img src="../img/edit.png" alt="edit image" class="edit__img">
+			</label>
+			<!--Email-->
+			<label for="user__email-info" class="label__item">
+				<span class="label__span">User email: </span>
+				<input type="text" class="input__item" id="user__email-info" value="User email@email.com" readonly>
+				<img src="../img/edit.png" alt="edit image" class="edit__img">
+			</label>
+			<!--Phone-->
+			<label for="user__phone-info" class="label__item">
+				<span class="label__span">User phone:</span>
+				<input type="text" class="input__item" id="user__name-info" value="+380123456789" readonly>
+				<img src="../img/edit.png" alt="edit image" class="edit__img">
+			</label>
+			<!--Address-->
+			<label for="user__address-info" class="label__item">
+				<span class="label__span">User address:</span>
+				<input type="text" class="input__item" id="user__address-info" value="Cherkasy, Shevchenko str.  1" readonly>
+				<img src="../img/edit.png" alt="edit image" class="edit__img">
+			</label>
+
+
+		</form>
+		</div>
+
+		<!--Registration form-->
+		<form action="user_page.html" class = "registration__form hidden">
+			<h2 class="form__title"><span class="registration selected__switch" id="registration">Registration</span> / <span class="login" id="login">Login</span></h2>
+			<!--Name-->
+			<label for="user__name" id="label__name">
+				<span class="label__title">Name</span> <span class="aster">*</span>
+				<input type="text" class="user__name" id="user__name" placeholder="Input name" name="user__name">
+				<div class="error__row" id="name__error"></div>
+			</label>
+			<!--Last name-->
+			<label for="user__last-name" id="label__last-name">
+				<span class="label__title">Last Name</span> <span class="aster">*</span>
+				<input type="text" class="user__last-name" id="user__last-name" placeholder="Input last name" name="user__last-name">
+				<div class="error__row" id="last__name-error"></div>
+			</label>
+			<!--Email-->
+			<label for="user__email">
+				<span class="label__title">Email</span> <span class="aster">*</span>
+				<input type="email" class="user__email" id="user__email" placeholder="Input email" name="user__email">
+				<div class="error__row" id="email__error"></div>
+			</label>
+			<!--Password-->
+			<label for="user__password">
+				<span class="label__title">Password</span> <span class="aster">*</span>
+				<input type="password" class="user__password" id="user__password" placeholder="Input Password" name="user__password">
+				<div class="error__row" id="password__error"></div>
+			</label>
+			<!--Confirm password-->
+			<label for="user__confirm-password" id="label__confirm-password">
+				<span class="label__title">Confirm password</span> <span class="aster">*</span>
+				<input type="password" class="user__confirm-password" id="user__confirm-password" placeholder="Confirm password" name="user__confirm-password">
+				<div class="error__row" id="confirm__password-error"></div>
+			</label>
+			<!--Registration button-->
+			<button class="form__button" id="registration__button">Registration</button>
+			</form>
+		<!--Login form-->
+		<form action="html/user_page.html" class = "login__form">
+			<h2 class="form__title"><span class="registration" id="registration2">Registration</span> / <span class="login selected__switch" id="login2">Login</span></h2>
+			<!--Email-->
+			<label for="log__user__email">
+				<span class="label__title">Email</span>
+					<input type="email" class="user__email" id="user__email" placeholder="Input email" name="user__email">
+				<div class="error__row" id="email__error"></div>
+			</label>
+			<!--Password-->
+			<label for="log__user__password">
+				<span class="label__title">Password</span>
+				<input type="password" class="user__password" id="log__user__password" placeholder="Input Password" name="user__password">
+				<div class="error__row" id="log__password__error"></div>
+			</label>
+			<!--Login buton-->
+			<button class="form__button" id="login__button">Login</button>
+		</form>
+	</div>
+	</main>
+	</div>
+	<script src = "../js/index.js"></script>
 </body>
 </html>

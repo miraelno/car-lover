@@ -1,31 +1,6 @@
-@import url("null.css");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-
-.wrapper {
-	display: flex;
-	flex-direction: column;
-	overflow: hidden;
-	box-sizing: border-box;
-	font-family: "Roboto", sans-serif;
-	min-width: 350px;
-	align-items: center;
-}
-
-.content {
-	padding: 0 30px;
-}
-
-.main {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	min-height: 100vh;
-	border: 1px solid #999;
-	background: url("../img/index__background.jpg") 50%;
-	background-size: contain;
-}
+/*Registration Form*/
 .registration__form {
-	display: flex;
+	display: none;
 	flex-direction: column;
 	max-width: 600px;
 	width: 100%;
@@ -38,8 +13,9 @@
 	box-sizing: border-box;
 }
 
+/*Login Form*/
 .login__form {
-	display: flex;
+	display: none;
 	flex-direction: column;
 	max-width: 600px;
 	width: 100%;
