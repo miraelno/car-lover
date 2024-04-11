@@ -11,9 +11,10 @@
 	<div class="wrapper">
 		<header class="header">
 			<!--Menu-->
+			<img src="../img/burger.svg" alt="#" class="burger__btn" id="burger__btn">
 			<nav class="header__menu container">
-				<img src="../img/burger.svg" alt="#" class="burger__btn" id="burger__btn">
-				<ul class="menu__list">
+				<div class="bkg"></div>
+					<ul class="menu__list">
 					<li class="menu__item"><a href="user_page.html" class="checked__menu">User profile</a></li>
 					<li class="menu__item"><a href="user_stages.html">Stages</a></li>
 					<li class="menu__item"><a href="user_photos.html">Photos</a></li>
@@ -35,31 +36,37 @@
 			<form action="#" class="user__form">
 			<h2 class="form__title">Welcome <span id="usr__name"></span></h2>
 			<!--Name-->
-			<label for="user__name-info" class="label__item">
-				<span class="label__span">User name: </span>
+			<label for="user__name-info" class="label__item">User name</label>
+				<div class="form__field">
 				<input type="text" class="input__item" id="user__name-info" value="User" readonly>
-				<img src="../img/edit.png" alt="edit image" class="edit__img">
-			</label>
+				<img src="../img/edit.png" alt="edit image" class="edit__img" id="reg1">
+				<img src="../img/confirm.png" alt="confirm" class="edit__img" id="reg1_1">
+			</div>
+			
 			<!--Email-->
-			<label for="user__email-info" class="label__item">
-				<span class="label__span">User email: </span>
-				<input type="text" class="input__item" id="user__email-info" value="User email@email.com" readonly>
-				<img src="../img/edit.png" alt="edit image" class="edit__img">
-			</label>
+			<label for="user__email-info" class="label__item">User email</label>
+			<div class="form__field">
+			<input type="text" class="input__item" id="user__email-info" value="User email@email.com" readonly>
+				<img src="../img/edit.png" alt="edit image" class="edit__img" id="reg2">
+				<img src="../img/confirm.png" alt="confirm" class="edit__img" id="reg2_1">
+			</div>	
+			
 			<!--Phone-->
-			<label for="user__phone-info" class="label__item">
-				<span class="label__span">User phone:</span>
+			<label for="user__phone-info" class="label__item">User phone:</label>
+				<div class="form__field">
 				<input type="text" class="input__item" id="user__name-info" value="+380123456789" readonly>
-				<img src="../img/edit.png" alt="edit image" class="edit__img">
-			</label>
+				<img src="../img/edit.png" alt="edit image" class="edit__img" id="reg3">
+				<img src="../img/confirm.png" alt="confirm" class="edit__img" id="reg3_1">
+			</div>
+			
 			<!--Address-->
-			<label for="user__address-info" class="label__item">
-				<span class="label__span">User address:</span>
+			<label for="user__address-info" class="label__item">User address</label>
+				<div class="form__field">
 				<input type="text" class="input__item" id="user__address-info" value="Cherkasy, Shevchenko str.  1" readonly>
-				<img src="../img/edit.png" alt="edit image" class="edit__img">
-			</label>
-
-
+				<img src="../img/edit.png" alt="edit image" class="edit__img" id="reg4">
+				<img src="../img/confirm.png" alt="confirm" class="edit__img" id="reg4_1">
+			</div>
+			
 		</form>
 		</div>
 
@@ -121,5 +128,6 @@
 	</main>
 	</div>
 	<script src = "../js/index.js"></script>
+	<script src="../js/user_page.js"></script>
 </body>
 </html>
