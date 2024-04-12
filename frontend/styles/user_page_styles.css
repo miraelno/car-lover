@@ -63,7 +63,6 @@
 .user__form {
 	display: flex;
 	flex-direction: column;
-	max-width: 90%;
 	width: 100%;
 	height: fit-content;
 	border-radius: 10px;
@@ -114,9 +113,11 @@
 /*Photo area*/
 .photo__area {
 	display: flex;
+	width: 100%;
 	flex-direction: column;
 	padding-top: 20px;
 	background-color: #fff;
+	border-radius: 10px;
 }
 
 .photo__row {
@@ -129,8 +130,11 @@
 
 .img__card {
 	display: flex;
+	box-sizing: border-box;
 	border: 1px solid #fff;
-	flex: 1 1 30%;
+	flex: 1 1 20%;
+	max-width: 20%;
+	height: 150px;
 }
 .img__item {
 	width: 100%;
@@ -141,4 +145,21 @@
 
 .close__img {
 	display: none;
+}
+
+.add__btn {
+	display: flex;
+	font-size: 20px;
+	font-weight: 600;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 5px;
+	border: 1px solid #555;
+	border-radius: 10px;
+}
+
+.plus {
+	width: 50%;
+	text-align: center;
 }

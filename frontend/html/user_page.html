@@ -21,7 +21,6 @@
 					<li class="menu__item"><a href="user_docs.html">Documents</a></li>
 					<li class="menu__item"><a href="user_cars.html">Cars</a></li>
 					<li class="menu__item"><a href="user_schedule.html">Schedule</a></li>
-					<li class="menu__item">Autorisation</li>
 				</ul>
 			</nav>
 		</header>
@@ -71,31 +70,20 @@
 		<!--Photo area-->
 		<div class="photo__area">
 			<h3 class="form__title">User car photos</h3>
-			<!--Car item-->
+			<!--Photo Row-->
 			<div class="photo__row">
+				<!--Card item-->
 		<div class="img__card">
 			<span class="close__img">X</span>
 			<img src="../img/car_item.jpg" alt="car" class="img__item">
 		</div>
-		<!--Car item-->
-		<div class="img__card">
-			<img src="../img/car_item.jpg" alt="car" class="img__item">
-		</div>
-		<!--Car item-->
-		<div class="img__card">
-			<img src="../img/car_item.jpg" alt="car" class="img__item">
-		</div>
-		<!--Car item-->
-		<div class="img__card">
-			<img src="../img/car_item.jpg" alt="car" class="img__item">
-		</div>
-		<!--Car item-->
-		<div class="img__card">
-			<img src="../img/car_item.jpg" alt="car" class="img__item">
-		</div>
-		<!--Car item-->
-		<div class="img__card">
-			<img src="../img/car_item.jpg" alt="car" class="img__item">
+		<!--Add photo button-->
+		<div class="img__card" id="add__btn">
+			<label class="add__btn" >
+			Add photo
+			<img src="../img/add_photo.png" alt="#" class="plus">
+			<input type="file" onchange="download(this)">			
+		</label>
 		</div>
 	</div>
 
@@ -118,4 +106,12 @@
 	</div>
 	<script src="../js/user_page.js"></script>
 </body>
+
+<template class="card__template">
+	<div class="img__card">
+		<span class="close__img">X</span>
+		<img src="../img/car_item.jpg" alt="car" class="img__item">
+	</div>
+</template>
+
 </html>

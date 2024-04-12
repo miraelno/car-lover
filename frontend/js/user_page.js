@@ -54,3 +54,19 @@ confItem.forEach(el => {
 	el.addEventListener('click', confEdit);
 });
 
+//Add photo
+const photoRow = document.querySelector('.photo__row');
+const addImg = document.getElementById('add__btn');
+
+const download = (input) => {
+	let file = input.files[0];
+	let reader = new FileReader();
+	reader.readAsDataURL(file);
+
+	reader.onload = function () {
+		let img = document.createElement('img');
+		addImg.before(img);
+		img.src = reader.result;
+		img.classList.add('.img__card');
+	}
+}
