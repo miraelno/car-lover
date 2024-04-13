@@ -3,10 +3,115 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../styles/user_page_styles.css">
 	<title>User page</title>
 </head>
 <body>
-	<h1>User Page</h1>
-	
+	<!--Wrapper-->
+	<div class="wrapper">
+		<header class="header">
+			<!--Menu-->
+			<img src="../img/burger.svg" alt="#" class="burger__btn" id="burger__btn">
+			<nav class="header__menu container">
+				<div class="bkg"></div>
+					<ul class="menu__list">
+					<li class="menu__item"><a href="user_page.html" class="checked__menu">User profile</a></li>
+					<li class="menu__item"><a href="user_stages.html">Stages</a></li>
+					<li class="menu__item"><a href="user_photos.html">Photos</a></li>
+					<li class="menu__item"><a href="user_docs.html">Documents</a></li>
+					<li class="menu__item"><a href="user_cars.html">Cars</a></li>
+					<li class="menu__item"><a href="user_schedule.html">Schedule</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!--Main-->
+		<main class="main">
+			<div class="title__around" ><h1 class="main__title">User Profile</h1></div>
+				<!--Main Row-->
+			<div class="main__row">							
+		<div class="main__data container">
+
+			<!--User information form-->
+			<form action="#" class="user__form">
+			<h2 class="form__title">Welcome <span id="usr__name"></span></h2>
+			<!--Name-->
+			<label for="user__name-info" class="label__item">User name</label>
+				<div class="form__field">
+				<input type="text" class="input__item" id="user__name-info" value="User" readonly>
+				<img src="../img/edit.png" alt="edit image" class="edit__img">
+				<img src="../img/confirm.png" alt="confirm" class="edit__img">
+			</div>
+			
+			<!--Email-->
+			<label for="user__email-info" class="label__item">User email</label>
+			<div class="form__field">
+			<input type="text" class="input__item" id="user__email-info" value="User email@email.com" readonly>
+				<img src="../img/edit.png" alt="edit image" class="edit__img">
+				<img src="../img/confirm.png" alt="confirm" class="edit__img">
+			</div>	
+			
+			<!--Phone-->
+			<label for="user__phone-info" class="label__item">User phone</label>
+				<div class="form__field">
+				<input type="text" class="input__item" id="user__phone-info" value="+380123456789" readonly>
+				<img src="../img/edit.png" alt="edit image" class="edit__img">
+				<img src="../img/confirm.png" alt="confirm" class="edit__img">
+			</div>
+			
+			<!--Address-->
+			<label for="user__address-info" class="label__item">User address</label>
+				<div class="form__field">
+				<input type="text" class="input__item" id="user__address-info" value="Cherkasy, Shevchenko str.  1" readonly>
+				<img src="../img/edit.png" alt="edit image" class="edit__img">
+				<img src="../img/confirm.png" alt="confirm" class="conf__img">
+			</div>
+		</form>
+
+		<!--Photo area-->
+		<div class="photo__area">
+			<h3 class="form__title">User car photos</h3>
+			<!--Photo Row-->
+			<div class="photo__row">
+				<!--Card item-->
+		<div class="img__card">
+			<span class="close__img">X</span>
+			<img src="../img/car_item.jpg" alt="car" class="img__item">
+		</div>
+		<!--Add photo button-->
+		<div class="img__card" id="add__btn">
+			<label class="add__btn" >
+			Add photo
+			<img src="../img/add_photo.png" alt="#" class="plus">
+			<input type="file" onchange="download(this)">			
+		</label>
+		</div>
+	</div>
+
+		</div>
+
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+	</div>
+	</main>
+	</div>
+	<script src="../js/user_page.js"></script>
 </body>
+
+<template class="card__template">
+	<div class="img__card">
+		<span class="close__img">X</span>
+		<img src="../img/car_item.jpg" alt="car" class="img__item">
+	</div>
+</template>
+
 </html>

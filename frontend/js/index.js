@@ -1,6 +1,7 @@
 //forms
 const loginForm = document.querySelector('.login__form');
 const regForm = document.querySelector('.registration__form');
+
 //Switchers of form
 const regSw = document.getElementById('registration');
 const logSw = document.getElementById('login');
@@ -27,6 +28,7 @@ const aster = document.querySelectorAll('.aster');
 
 const EMAIL_INPUT_ID = 'user__email';
 const PASSWORD_INPUT_ID = 'user__password';
+
 //Errors variables
 const ERRORS_NAME_ID = 'name__error';
 const ERRORS_SECOND_NAME_ID = 'last__name-error';
@@ -36,7 +38,7 @@ const ERRORS_CONFIRM_PASSWORD_ID = 'confirm__password-error';
 const ERRORS_CHECK_ID = 'check__error';
 
 //Path to success validation page
-const RESULT_PAGE_PATH = '/html/admin_page.html';
+const RESULT_PAGE_PATH = 'user_page.html';
 
 //this function switches to registration form
 const swToreg2 = () => {
@@ -88,16 +90,15 @@ function setErrors(errorId, error) {
 function deleteErrors() {
 	const errorsEmail = document.getElementById(ERRORS_EMAIL_ID);
 	const errorsPass = document.getElementById(ERRORS_PASSWORD_ID);
-	// const errorsCheck = document.getElementById(ERRORS_CHECK_ID);
+	
 	userEmail.classList.remove('error__input');
 	userPassword.classList.remove('error__input');
-	// check.classList.remove('error__input');
 	errorsEmail.replaceChildren();
 	errorsPass.replaceChildren();
-	// errorsCheck.replaceChildren();
-}
+	}
 
 function navigateToResultPage() {
+	loginForm.action = RESULT_PAGE_PATH;
 	window.location.href = RESULT_PAGE_PATH;
 }
 
@@ -111,12 +112,12 @@ function isEmail(e) {
 	return /\S+@\S+\.\S+/.test(e);
 }
 
+//login validation
 function LoginValidateForm() {
 	const inputData = {};
 	const emailInp = getValueById(EMAIL_INPUT_ID).trim();
 	const passInp = getValueById(PASSWORD_INPUT_ID);
-	// const checkInp = getValueById(NOT_A_ROBOT_CHECKBOX_ID);
-
+	
 	deleteErrors();
 
 	if (emailInp === '') {
@@ -153,8 +154,7 @@ function RegValidateForm() {
 	const inputData = {};
 	const emailInp = getValueById(EMAIL_INPUT_ID).trim();
 	const passInp = getValueById(PASSWORD_INPUT_ID);
-	// const checkInp = getValueById(NOT_A_ROBOT_CHECKBOX_ID);
-
+	
 	deleteErrors();
 
 	if (emailInp === '') {

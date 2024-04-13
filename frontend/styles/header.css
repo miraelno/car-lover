@@ -1,0 +1,108 @@
+.header {
+	display: flex;
+	width: 100%;
+	height: 50px;
+	justify-content: center;
+}
+
+.burger__btn {
+	display: none;
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	transition: all 100ms ease-in-out;
+	top: 20px;
+	right: 20px;
+	z-index: 5;
+}
+
+.burger__btn:hover {
+	/* color: #ee9600; */
+	transition: all 100ms ease-in-out;
+}
+
+.header__menu {
+	width: 100%;
+	position: relative;
+	background-color: rgba(9, 72, 142, 0.8);
+	z-index: 1;
+}
+
+.menu__list {
+	display: flex;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	justify-content: space-between;
+	font-size: 25px;
+	font-weight: 700;
+	z-index: 9;
+}
+
+.menu__item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	text-decoration: none;
+	border: 1px solid #222;
+	border-left: none;
+	width: 100%;
+	height: 100%;
+	transition: all 150ms ease-in-out;
+	z-index: 10;
+}
+
+.menu__item:last-child {
+	color: #fff;
+	transition: all 150ms ease-in-out;
+}
+
+.menu__item:last-child:hover {
+	color: #ee9600;
+	transition: all 150ms ease-in-out;
+}
+
+.menu__item a {
+	color: #fff;
+	transition: all 150ms ease-in-out;
+}
+
+.menu__item a:hover {
+	color: #ee9600;
+	transition: all 150ms ease-in-out;
+}
+
+@media (max-width: 997px) {
+	.burger__btn {
+		display: block;
+	}
+	.header__menu {
+		display: none;
+		height: 100vh;
+		backdrop-filter: blur(15px);
+	}
+
+	.menu__list {
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.menu__item {
+		border: none;
+	}
+}
+
+/*Visibility class*/
+.hidden {
+	display: none;
+}
+
+.checked__menu {
+	text-decoration: underline;
+}
+
+.d__flex {
+	display: flex;
+}
