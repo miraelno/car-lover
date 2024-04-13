@@ -7,7 +7,7 @@ from apps.cars.models import Car
 
 class Schedule(models.Model):
     start_date = models.DateField(_("start_date"), blank=True, null=True)
-    stage = models.ForeignKey(Stage, on_delete=models.SET_NULL, null=True, blank=True)
+    stage = models.ForeignKey(Stage, on_delete=models.SET_NULL, null=True, blank=True, default=1)
     car = models.ForeignKey(Car, on_delete=models.CASCADE)
     
     def __str__(self):

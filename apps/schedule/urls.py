@@ -2,7 +2,7 @@ from django.urls import include
 from django.urls import path
 from rest_framework import routers
 
-from apps.schedule.views.views import ScheduleViewSet
+from apps.schedule.views.schedule_modelviewset import ScheduleViewSet
 
 app_name = "schedule"
 

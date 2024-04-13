@@ -6,11 +6,11 @@ from apps import settings
 
 
 @shared_task()
-def send_confirmation_email(email, user_id, token_id):
-    data = {"user_id": str(user_id), "token_id": str(token_id)}
-    message = get_template("emails/confirmation_email.txt").render(data)
+def send_new_stage_notification_email(email, stage, car):
+    data = {"stage": str(stage), "car": str(car)}
+    message = get_template("emails/new_stage.txt").render(data)
     send_mail(
-        subject="Email confirmation",
+        subject="New stage",
         message=message,
         from_email=settings.EMAIL_HOST_USER,
         recipient_list=[email],

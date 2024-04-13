@@ -1,3 +1,4 @@
+from typing import Any, Iterable
 import uuid
 
 from django.contrib.auth.base_user import AbstractBaseUser
@@ -40,10 +41,29 @@ class User(AbstractBaseUser, PermissionsMixin):
     USERNAME_FIELD = "email"
     EMAIL_FIELD = "email"
 
+    def save(self, *args, **kwargs) -> None:
+        is_new = False
+        if self.updated_at is None:
+            is_new = True
+
+        super().save(*args, **kwargs)
+
+        if is_new:
+            NotificationSettings.objects.create(user=self)
+
     class Meta:
         verbose_name = _("user")
         verbose_name_plural = _("users")
         db_table = "user"
 
 
-# TODO: add notification settings table
+class NotificationSettings(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='notification_settings')
+    on_stage_change = models.BooleanField(default=True)
+    on_document_adding = models.BooleanField(default=True)
+    on_image_adding = models.BooleanField(default=True)
+
+    class Meta:
+        verbose_name = _("notification_settings")
+        verbose_name_plural = _("notification_settings")
+        db_table = "notification_settings"

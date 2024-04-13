@@ -1,0 +1,2 @@
+Your car {{car}} now in {{stage}} stage.
+You can check the progress in your profile!

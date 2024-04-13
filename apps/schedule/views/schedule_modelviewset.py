@@ -2,9 +2,8 @@ from rest_framework import viewsets
 from rest_framework.permissions import IsAdminUser
 from rest_framework.response import Response
 
-from apps.users.tasks import send_schedule_added_email
 from apps.schedule.models import Schedule
-from apps.schedule.serializers.get_schedule import ScheduleInformationSerializer
+from apps.schedule.serializers.schedule import ScheduleInformationSerializer
 
 
 class ScheduleViewSet(viewsets.ModelViewSet):
