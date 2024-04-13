@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="../styles/user_page_styles.css">
+	<link rel="icon" href="../img/favicon.ico">
 	<title>User page</title>
 </head>
 <body>
@@ -68,11 +69,46 @@
 		</form>
 
 		<!--Photo area-->
-		<div class="photo__area">
+		<section class="photo__area">
 			<h3 class="form__title">User car photos</h3>
 			<!--Photo Row-->
 			<div class="photo__row">
 				<!--Card item-->
+		<div class="img__card">
+			<span class="close__img">X</span>
+			<img src="../img/car_item.jpg" alt="car" class="img__item">
+		</div>
+		<!--Card item-->
+		<div class="img__card">
+			<span class="close__img">X</span>
+			<img src="../img/car_item.jpg" alt="car" class="img__item">
+		</div>
+		<!--Card item-->
+		<div class="img__card">
+			<span class="close__img">X</span>
+			<img src="../img/sl500.JPG" alt="car" class="img__item">
+		</div>
+		<!--Card item-->
+		<div class="img__card">
+			<span class="close__img">X</span>
+			<img src="../img/car_item.jpg" alt="car" class="img__item">
+		</div>
+		<!--Card item-->
+		<div class="img__card">
+			<span class="close__img">X</span>
+			<img src="../img/car_item.jpg" alt="car" class="img__item">
+		</div>
+		<!--Card item-->
+		<div class="img__card">
+			<span class="close__img">X</span>
+			<img src="../img/car_item.jpg" alt="car" class="img__item">
+		</div>
+		<!--Card item-->
+		<div class="img__card">
+			<span class="close__img">X</span>
+			<img src="../img/car_item.jpg" alt="car" class="img__item">
+		</div>
+		<!--Card item-->
 		<div class="img__card">
 			<span class="close__img">X</span>
 			<img src="../img/car_item.jpg" alt="car" class="img__item">
@@ -86,32 +122,91 @@
 		</label>
 		</div>
 	</div>
+		</section>
 
+		<!--User's cars list-->
+		<section class="users__cars-list">
+			<h3 class="form__title">Your Registered Cars</h3>
+			<!--Cars row-->
+			<div class="reg__cars-row">
+				<!--Card item-->
+		<div class="car__card">
+			<img src="../img/sl500.JPG" alt="car" class="car__img">
+			<div class="card__title">Model : <span class="card__text">Mersedes SL-50</span></div>
+			<div class="card__title">Vin-code : <span class="card__text">1232334</span></div>
+			<div class="card__title">State number : <span class="card__text">CA4554AC</span></div>
+			<div class="card__title">Registration date : <span class="card__text">14.02.2015</span></div>
+			<div class="card__title">Car mileage : <span class="card__text">120000km</span></div>
 		</div>
-
+		<!--Card item-->
+		<div class="car__card">
+			<img src="../img/car_item.jpg" alt="car" class="car__img">
+			<div class="card__title">Model : <span class="card__text">Mersedes SL-50</span></div>
+			<div class="card__title">Vin-code : <span class="card__text">1232334</span></div>
+			<div class="card__title">State number : <span class="card__text">CA4554AC</span></div>
+			<div class="card__title">Registration date : <span class="card__text">14.02.2015</span></div>
+			<div class="card__title">Car mileage : <span class="card__text">120000km</span></div>
 		</div>
+		<!--Card item-->
+		<div class="car__card">
+			<img src="../img/sl500.JPG" alt="car" class="car__img">
+			<div class="card__title">Model : <span class="card__text">Mersedes SL-50</span></div>
+			<div class="card__title">Vin-code : <span class="card__text">1232334</span></div>
+			<div class="card__title">State number : <span class="card__text">CA4554AC</span></div>
+			<div class="card__title">Registration date : <span class="card__text">14.02.2015</span></div>
+			<div class="card__title">Car mileage : <span class="card__text">120000km</span></div>
+		</div>
+			</div>
+		</section>
+
+		<!--Notifications-->
+		<section class="notifications__settings">
+			<button class="notifications" id="bell__btn"><img src="../img/bell.png" alt="bell"></button>
+			<ul class="notifications__list hidden">
+				<li class="not__item">
+					<h4 class="not__title">Notifications settings</h4>
+				</li>
+				<li class="not__item">
+					<span class="toggle__text">Change status</span>
+					<label class="switch">
+						<input type="checkbox" id="check1">
+						<span class="slider round"></span>
+					</label>
+				</li>
+				<li class="not__item">
+					<span class="toggle__text">Photo adding</span>
+					<label class="switch">
+						<input type="checkbox" id="check2">
+						<span class="slider round"></span>
+					</label>
+				</li>
+				<li class="not__item">
+					<span class="toggle__text">Document adding</span>
+					<label class="switch">
+						<input type="checkbox" id="check3">
+						<span class="slider round"></span>
+					</label>
+				</li>
+			</ul>
+		</section>
+
+
+		</div> <!--Main data container-->
 
 
 
 
-
-
-
-
-
-
-
-	</div>
+	</div> <!--Main row-->
 	</main>
-	</div>
+	</div> <!--Wrapper-->
+
+	<!--Template-->
+	<template data-card_template>
+		<div class="img__card">
+			<span class="close__img">X</span>
+			<img src="../img/car_item.jpg" alt="car" class="img__item" data-image>
+		</div>
+	</template>
 	<script src="../js/user_page.js"></script>
 </body>
-
-<template class="card__template">
-	<div class="img__card">
-		<span class="close__img">X</span>
-		<img src="../img/car_item.jpg" alt="car" class="img__item">
-	</div>
-</template>
-
 </html>
