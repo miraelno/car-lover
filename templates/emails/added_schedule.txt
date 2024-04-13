@@ -1,0 +1,2 @@
+The {{stage}} is starting on {{date}} for {{car}} car.
+You can check the progress in your profile!

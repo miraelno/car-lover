@@ -12,6 +12,11 @@ class Image(models.Model):
     stage = models.ForeignKey(Stage, on_delete=models.DO_NOTHING)
     uploaded_on = models.DateTimeField(auto_now_add=True)
 
+    
+    def __str__(self) -> str:
+        return self.name
+    
+    
     class Meta:
         verbose_name = _("image")
         verbose_name_plural = _("images")

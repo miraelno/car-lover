@@ -12,3 +12,5 @@ class ScheduleInformationSerializer(serializers.ModelSerializer):
         extra_kwargs = {
             "stage": {"required": False},
         }
+        
+    

@@ -43,6 +43,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     class Meta:
         verbose_name = _("user")
         verbose_name_plural = _("users")
+        db_table = "user"
 
 
 # TODO: add notification settings table

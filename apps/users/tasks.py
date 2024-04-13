@@ -15,3 +15,14 @@ def send_confirmation_email(email, user_id, token_id):
         from_email=settings.EMAIL_HOST_USER,
         recipient_list=[email],
     )
+
+@shared_task()
+def send_schedule_added_email(email, stage, date, car):
+    data = {"stage": str(stage), "date": str(date), "car": str(car)}
+    message = get_template("emails/added_schedule.txt").render(data)
+    send_mail(
+        subject="New schedule",
+        message=message,
+        from_email=settings.EMAIL_HOST_USER,
+        recipient_list=[email],
+    )

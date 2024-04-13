@@ -29,6 +29,7 @@ urlpatterns = [
     path("api/car/", include("apps.cars.urls", namespace="cars")),
     path("api/", include("apps.documents.urls", namespace="documents")),
     path("api/", include("apps.images.urls", namespace="images")),
+    path("api/", include("apps.schedule.urls", namespace="schedule")),
     # Swagger
     path("api/schema/", SpectacularAPIView.as_view(), name="schema"),
     path(

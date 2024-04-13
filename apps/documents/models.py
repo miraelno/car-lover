@@ -11,6 +11,10 @@ class Document(models.Model):
     # TODO: enum of document categories
     uploaded_on = models.DateTimeField(auto_now_add=True)
 
+    
+    def __str__(self) -> str:
+        return self.name
+    
     class Meta:
         verbose_name = _("document")
         verbose_name_plural = _("documents")
