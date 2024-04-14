@@ -10,4 +10,4 @@ class ListDocumentSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Document
-        fields = ["name", "file", "uploaded_on"]
+        fields = ["name", "file", "document_type", "uploaded_on"]

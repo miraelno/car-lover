@@ -1,0 +1,2 @@
+New image is added for {{car}} in {{stage}} stage.
+You can check the progress in your profile!

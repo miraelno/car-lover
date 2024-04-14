@@ -13,12 +13,12 @@ class Car(models.Model):
     vin_code = models.CharField(_("vin code"), max_length=150, blank=True, default="")
     number = models.CharField(_("number"), max_length=20)
     mileage = models.CharField(_("mileage"), max_length=20, blank=True, default="")
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    stage = models.ForeignKey(Stage, on_delete=models.SET_NULL, null=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="cars")
+    stage = models.ForeignKey(Stage, on_delete=models.SET_NULL, null=True, related_name="stage")
 
     def __str__(self):
         return self.number
-    
+
     class Meta:
         verbose_name = _("car")
         verbose_name_plural = _("cars")

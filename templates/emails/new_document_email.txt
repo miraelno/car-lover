@@ -1,0 +1,2 @@
+New document is added for {{car}} car.
+You can check the progress in your profile!

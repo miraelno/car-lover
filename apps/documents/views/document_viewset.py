@@ -26,10 +26,23 @@ class DocumentViewSet(ModelViewSet):
     def get_queryset(self):
         match self.action:
             case "list" | "destroy":
-                return Document.objects.filter(owner=self.request.user)
+                return Document.objects.filter(car__user__id=self.request.user.id)
+            case "retrieve":
+                return Document.objects.filter(car=self.kwargs["pk"])
             case _:
                 return super().get_queryset()
 
+
+    def retrieve(self, request, *args, **kwargs):
+        queryset = self.get_queryset().order_by("document_type")
+        document_type = self.request.query_params.get("document_type")
+
+        if document_type is not None:
+            queryset = queryset.filter(document_type=document_type)
+
+        serializer = ListDocumentSerializer(queryset, many=True)
+        return Response(serializer.data)
+    
     def perform_destroy(self, instance):
         fs = FileSystemStorage()
         fs.delete(instance.name)
