@@ -12,34 +12,8 @@
 }
 
 .content {
-	/* max-width: 1400px; */
 	padding: 0 30px;
 }
-
-/* .header {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	height: 80px;
-}
-
-.header__menu {
-	width: 100%;
-}
-
-.menu__list {
-	display: flex;
-	justify-content: space-between;
-	width: 100%;
-	font-size: 25px;
-	font-weight: 700;
-}
-
-.menu__item {
-	cursor: pointer;
-}
- */
 
 .main {
 	display: flex;
@@ -47,10 +21,10 @@
 	width: 100%;
 	min-height: 100vh;
 	border: 1px solid #999;
-	background: url("/img/index__background.jpg") 50%;
+	background: url("../img/index__background.jpg") 50%;
 	background-size: contain;
 }
-.main__form {
+.registration__form {
 	display: flex;
 	flex-direction: column;
 	max-width: 600px;
@@ -64,20 +38,37 @@
 	box-sizing: border-box;
 }
 
+.login__form {
+	display: flex;
+	flex-direction: column;
+	max-width: 600px;
+	width: 100%;
+	height: fit-content;
+	border-radius: 10px;
+	margin: 30px auto;
+	padding: 30px 15px;
+	background-color: #fff;
+	row-gap: 20px;
+	box-sizing: border-box;
+}
 .form__title {
+	width: fit-content;
 	font-size: 25px;
 	font-weight: 600;
 	letter-spacing: 0.5px;
+	line-height: 25px;
 	text-align: center;
 	color: #07468d;
 	text-transform: uppercase;
 	transition: all 150ms ease-in-out;
 	cursor: pointer;
+	margin: 0 auto;
 }
 
 .registration:hover,
 .login:hover {
 	color: #fa831b;
+	text-decoration: underline;
 	transition: all 150ms ease-in-out;
 }
 
@@ -185,4 +176,11 @@
 .selected__switch {
 	color: #fa831b;
 	text-decoration: underline;
+}
+
+.error__row {
+	font-size: 20px;
+	color: #fc0324;
+	margin-top: 10px;
+	padding-left: 15px;
 }
