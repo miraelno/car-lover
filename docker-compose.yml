@@ -16,19 +16,19 @@ services:
       - .:/code
     ports:
       - 8000:8000
-      - 3000:3000
+      - 4000:4000
     depends_on:
       - db
       - redis
 
-  client:
-      build:
-        context: src
-        dockerfile: Dockerfile
-      ports:
-          - 80:80
-      volumes:
-          - ./src:/usr/share/nginx/html
+  # client:
+  #     build:
+  #       context: src
+  #       dockerfile: Dockerfile
+  #     ports:
+  #         - 80:80
+  #     volumes:
+  #         - ./src:/usr/share/nginx/html
 
   celery:
         build: .
