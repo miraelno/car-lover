@@ -1,0 +1,102 @@
+@import url("null.css");
+@import url("header.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	box-sizing: border-box;
+	font-family: "Roboto", sans-serif;
+	min-width: 350px;
+	background: url("../img/index__background.jpg") 50%;
+}
+
+.container {
+	width: 100%;
+	max-width: 1400px;
+}
+
+.main {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin-bottom: 100px;
+	/* height: calc(100vh - 50px); */
+}
+
+.title__around {
+	width: fit-content;
+	margin: 0 auto;
+	margin-top: 30px;
+	padding: 5px 10px 0px 10px;
+	border-start-start-radius: 10px;
+	border-start-end-radius: 10px;
+	background-color: rgba(200, 200, 200, 0.5);
+}
+
+.main__title {
+	display: flex;
+	justify-content: center;
+	height: fit-content;
+	font-size: 40px;
+	font-weight: 700;
+	color: #fff;
+}
+
+.main__row {
+	display: flex;
+	height: 100%;
+	width: 100%;
+	padding: 0 20px;
+	padding-bottom: 30px;
+	background-color: rgba(200, 200, 200, 0.5);
+	/* margin-top: 30px; */
+}
+
+@media (max-width: 767px) {
+	.main__row {
+		padding: 0 10px;
+	}
+}
+
+.main__data {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	min-height: 100vh;
+	margin: 30px 0;
+	padding: 30px 100px;
+	border-radius: 10px;
+	background-color: #fff;
+}
+
+.stages__list {
+	display: flex;
+	flex-direction: column;
+	font-size: 30px;
+}
+.stage__item {
+	list-style: square;
+}
+
+.stage__name {
+	font-weight: 700;
+	color: #07468d;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+}
+.stage__status {
+	color: #000;
+	font-weight: normal;
+}
+
+.initial::before {
+	content: "";
+}
+
+.process {
+}
+
+.done {
+}

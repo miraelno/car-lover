@@ -17,11 +17,6 @@
 	z-index: 5;
 }
 
-.burger__btn:hover {
-	/* color: #ee9600; */
-	transition: all 100ms ease-in-out;
-}
-
 .header__menu {
 	width: 100%;
 	position: relative;
@@ -37,7 +32,7 @@
 	justify-content: space-between;
 	font-size: 25px;
 	font-weight: 700;
-	z-index: 9;
+	z-index: 50;
 }
 
 .menu__item {
