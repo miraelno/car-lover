@@ -11,6 +11,7 @@ axios.defaults.baseURL = 'http://localhost:8000';
 // axios.defaults.headers.common = {'Authorization': `Token ${token}`}
 
 function App() {
+  
   return (
     <UserContextProvider>
       <Routes>
