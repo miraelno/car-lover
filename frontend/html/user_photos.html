@@ -4,9 +4,75 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Photos</title>
-	<h1>User Photos</h1>
+	<link rel="icon" href="../img/favicon.ico">	
+	<link rel="stylesheet" href="../styles/user_photos_styles.css">
 </head>
 <body>
-	
+	<div class="wrapper">
+		<!--Header-->
+		<header class="header">
+			<!--Menu-->
+			<img src="../img/burger.svg" alt="#" class="burger__btn" id="burger__btn">
+			<nav class="header__menu container">
+				<div class="bkg"></div>
+					<ul class="menu__list">
+					<li class="menu__item"><a href="user_page.html">User profile</a></li>
+					<li class="menu__item"><a href="user_stages.html" class="checked__menu">Stages</a></li>
+					<li class="menu__item"><a href="user_photos.html">Photos</a></li>
+					<li class="menu__item"><a href="user_docs.html">Documents</a></li>
+					<li class="menu__item"><a href="user_cars.html">Cars</a></li>
+					<li class="menu__item"><a href="user_schedule.html">Schedule</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!--Main-->
+		<main class="main">
+			<div class="title__around" ><h1 class="main__title">Photos</h1></div>
+				<!--Main Row-->
+			   	<div class="main__row">							
+						<div class="main__data container">
+							<h5 class="process__title">Work process</h5>
+							<!--Stages__list-->
+							<ul class="work__process">
+								<!--Stage item-->
+								<li class="stage__item stage__name">
+									<h6>Diagnostic</h6>
+									<div class="cards__row">	
+									<!--Card-->
+									<section class="car__card">
+										<img src="../img/sl500.JPG" alt="car" class="car__img">
+										<div class="card__title">Stage : <span class="card__text">Diagnostic</span></div>
+										<div class="card__title">Data : <span class="card__text">12.04.2024</span></div>
+										<div class="card__title">Description : <span class="card__text">Something about this card</span></div>
+									</section>
+									<!--Card-->
+									<section class="car__card">
+										<img src="../img/sl500.JPG" alt="car" class="car__img">
+										<div class="card__title">Stage : <span class="card__text">Diagnostic</span></div>
+										<div class="card__title">Data : <span class="card__text">12.04.2024</span></div>
+										<div class="card__title">Description : <span class="card__text">Something about this card</span></div>
+									</section>
+									<!--Card-->
+									<section class="car__card">
+										<img src="../img/sl500.JPG" alt="car" class="car__img">
+										<div class="card__title">Stage : <span class="card__text">Diagnostic</span></div>
+										<div class="card__title">Data : <span class="card__text">12.04.2024</span></div>
+										<div class="card__title">Description : <span class="card__text">Something about this card</span></div>
+									</section>
+									
+								</div>
+								</li>
+								<!--Stage item-->
+								<li class="stage__item"></li>
+								<!--Stage item-->
+								<li class="stage__item"></li>
+							</ul>
+							
+							</div>
+					</div>
+		</main>
+	</div>
+
+	<script src="../js/header.js"></script>
 </body>
 </html>
