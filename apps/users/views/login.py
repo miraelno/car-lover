@@ -20,9 +20,6 @@ class LoginAPIView(APIView):
 
         return Response(
             {
-                "token": token.key,
-                "user_id": user.pk,
-                "email": user.email,
-                "last_login": user.last_login,
+                "token": token.key
             }
         )

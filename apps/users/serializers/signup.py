@@ -8,7 +8,7 @@ from apps.users.tasks import send_confirmation_email
 
 
 class SignUpSerializer(serializers.ModelSerializer):
-    email = serializers.EmailField(required=True, max_length=255)
+    email = serializers.EmailField(required=True, max_length=255, write_only=True)
     password = serializers.CharField(
         label=_("Password"),
         style={"input_type": "password"},
@@ -20,9 +20,7 @@ class SignUpSerializer(serializers.ModelSerializer):
         model = User
         fields = [
             "email",
-            "password",
-            "first_name",
-            "last_name",
+            "password"
         ]
 
     def validate_email(self, value):
