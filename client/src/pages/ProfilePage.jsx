@@ -1,10 +1,11 @@
 import { useContext, useEffect, useState } from 'react';
 import { UserContext } from '../UserContext';
-import { Link, Navigate } from 'react-router-dom';
+import { useNavigate, Navigate } from 'react-router-dom';
 import { TEInput, TERipple } from 'tw-elements-react';
 import axios from 'axios';
 
 export default function ProfilePage() {
+  const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -46,11 +47,11 @@ export default function ProfilePage() {
     return 'Loading..';
   }
   if (ready && !user) {
-    return <Navigate to={'/login'} />;
+    return navigate('/login');
   }
 
   if (!user) {
-    return <Navigate to={'/login'} />;
+    return navigate('/login');
   }
 
   return (

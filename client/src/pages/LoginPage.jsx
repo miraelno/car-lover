@@ -24,7 +24,8 @@ export default function LoginPage() {
       sessionStorage.setItem('id', id)
       setRedirect(true)
     }).catch((error) => {
-      alert('Login failed! ' + error)
+      console.log(error.response.data.non_field_errors)
+      alert('Login failed! ' + error.response.data.non_field_errors)
     })
   }
 

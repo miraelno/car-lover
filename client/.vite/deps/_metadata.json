@@ -1,0 +1,58 @@
+{
+  "hash": "0c61bd5c",
+  "configHash": "d9925254",
+  "lockfileHash": "fa7f928a",
+  "browserHash": "7000711e",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "c5c084c9",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "c5b33ee6",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.js",
+      "file": "react-router-dom.js",
+      "fileHash": "54a1e8dd",
+      "needsInterop": false
+    },
+    "axios": {
+      "src": "../../node_modules/axios/index.js",
+      "file": "axios.js",
+      "fileHash": "e211dbe1",
+      "needsInterop": false
+    },
+    "tw-elements-react": {
+      "src": "../../node_modules/tw-elements-react/dist/js/tw-elements-react.es.min.js",
+      "file": "tw-elements-react.js",
+      "fileHash": "18292a68",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-PXJLUKTU": {
+      "file": "chunk-PXJLUKTU.js"
+    },
+    "chunk-FQO5W7GE": {
+      "file": "chunk-FQO5W7GE.js"
+    },
+    "chart-ZAVFK2WY": {
+      "file": "chart-ZAVFK2WY.js"
+    },
+    "chartjs-plugin-datalabels.esm-POIAONIQ": {
+      "file": "chartjs-plugin-datalabels__esm-POIAONIQ.js"
+    },
+    "chunk-GQMWQK6W": {
+      "file": "chunk-GQMWQK6W.js"
+    },
+    "chunk-ZS7NZCD4": {
+      "file": "chunk-ZS7NZCD4.js"
+    }
+  }
+}

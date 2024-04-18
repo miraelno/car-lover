@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { useParams, Navigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import {
   TETabs,
   TETabsContent,
@@ -12,7 +12,6 @@ import CarImages from '../components/CarImages';
 import CarInfoBlock from '../components/CarInfoBlock';
 import CarFiles from '../components/CarFiles';
 import CarSchedule from '../components/CarSchedule';
-// import CarImages from 
 
 export default function CarInfo() {
   const token = sessionStorage.getItem('token');
