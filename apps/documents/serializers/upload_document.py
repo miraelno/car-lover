@@ -20,5 +20,5 @@ class UploadDocumentSerializer(serializers.ModelSerializer):
         request_file = validated_data["file"]
         file = fs.save(request_file.name, request_file)
         file_url = fs.url(file)
-        document = Document.objects.create(name=file, file=file_url, car=car, document_type=validated_data["type"])
+        document = Document.objects.create(name=file, file=file_url, car=car, document_type=validated_data["document_type"])
         return document

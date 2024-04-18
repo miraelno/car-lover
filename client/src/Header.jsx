@@ -26,7 +26,7 @@ export default function Header() {
           <span className="font-bold text-xl">Car Lover</span>
         </Link>
         <div className="flex items-center gap-2">
-        {!!user && <div>{user.email} {user.id}</div>}
+        {!!user && <div>{user.email}</div>}
           <Link to={user?'/profile':'/login'}>
             <svg
               xmlns="http://www.w3.org/2000/svg"

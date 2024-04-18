@@ -10,6 +10,6 @@ class StageViewSet(ModelViewSet):
     
     def get_permissions(self):
         if self.action != 'list':
-            return IsAdminUser
+            return [IsAdminUser()]
         
         return super().get_permissions()

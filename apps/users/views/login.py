@@ -20,6 +20,7 @@ class LoginAPIView(APIView):
 
         return Response(
             {
-                "token": token.key
+                "token": token.key,
+                "id": user.id
             }
         )

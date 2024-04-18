@@ -31,6 +31,7 @@ class CustomUserAdmin(UserAdmin):
     #taken from super
     fieldsets = (
         (None, {"fields": ["password"]}),
+        # (("User info"), {"fields": ("first_name","last_name")})
         (
             ("Permissions"),
             {

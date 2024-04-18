@@ -19,7 +19,9 @@ export default function LoginPage() {
       console.log(res.data)
       setUser(res.data)
       const token = res.data.token
+      const id = res.data.id
       sessionStorage.setItem('token', token)
+      sessionStorage.setItem('id', id)
       setRedirect(true)
     }).catch((error) => {
       alert('Login failed! ' + error)
