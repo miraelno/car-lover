@@ -59,7 +59,7 @@ export default function CarInfo() {
   }, [id]);
 
   return (
-    <div className="mb-3 mt-3">
+    <div className="m-3">
       <TETabs justify>
         <TETabsItem
           onClick={() => handleJustifyClick('tab1')}

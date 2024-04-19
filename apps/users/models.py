@@ -1,5 +1,6 @@
-from typing import Any, Iterable
 import uuid
+from typing import Any
+from typing import Iterable
 
 from django.contrib.auth.base_user import AbstractBaseUser
 from django.contrib.auth.models import PermissionsMixin
@@ -58,7 +59,9 @@ class User(AbstractBaseUser, PermissionsMixin):
 
 
 class NotificationSettings(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='notification_settings')
+    user = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="notification_settings"
+    )
     on_stage_change = models.BooleanField(default=True)
     on_document_adding = models.BooleanField(default=True)
     on_image_adding = models.BooleanField(default=True)

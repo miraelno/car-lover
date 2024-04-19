@@ -1,12 +1,12 @@
+from drf_spectacular.utils import extend_schema
 from rest_framework import generics
 from rest_framework.permissions import IsAdminUser
 
 from apps.cars.models import Car
 from apps.cars.serializers.stage_change import StageChangeSerializer
 
-# TODO: maybe i need to use body with car and stage id for celery??
 
-
+@extend_schema(tags=["Cars"])
 class StageChangeUpdateAPIView(generics.UpdateAPIView):
     queryset = Car.objects.all()
     lookup_field = "pk"

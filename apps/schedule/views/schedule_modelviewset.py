@@ -1,3 +1,4 @@
+from drf_spectacular.utils import extend_schema
 from rest_framework import viewsets
 from rest_framework.permissions import IsAdminUser
 from rest_framework.response import Response
@@ -6,10 +7,10 @@ from apps.schedule.models import Schedule
 from apps.schedule.serializers.schedule import ScheduleInformationSerializer
 
 
+@extend_schema(tags=["Schedule"])
 class ScheduleViewSet(viewsets.ModelViewSet):
     serializer_class = ScheduleInformationSerializer
     queryset = Schedule.objects.all()
-
 
     def get_permissions(self):
         match self.action:

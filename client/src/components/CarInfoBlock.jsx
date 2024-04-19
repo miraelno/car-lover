@@ -46,7 +46,7 @@ export default function CarInfoBlock() {
       <p>Car model: {car.model}</p>
       <p>Vin code: {car.vin_code}</p>
       <p>Mileage: {car.mileage} miles</p>
-      <p>Current stage: {stages.length > 0 && stages.find(stage => stage.id == car.stage).name}</p>
+      {/* <p>Current stage: {stages.length > 0 && stages.find(stage => stage.id == car.stage).name}</p> */}
     </div>
   );
 }

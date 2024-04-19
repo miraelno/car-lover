@@ -7,7 +7,7 @@ export default function Navigation() {
   return (
     <div>
       {' '}
-      <nav className="w-full flex justify-center mt-4 gap-4 mt-8">
+      <nav className="w-full flex justify-center gap-4 m-4">
         <Link className={`py-2 px-4 ${location.pathname === '/'  || location.pathname === '/car/'? 'bg-gray-300 rounded-full' : ''}`} to={'/'}>
           My cars
         </Link>

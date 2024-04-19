@@ -10,9 +10,3 @@ class UpdatePasswordView(generics.UpdateAPIView):
 
     def get_object(self, queryset=None):
         return self.request.user
-
-    # def put(self, request, *args, **kwargs):
-    #     user = UpdatePasswordSerializer(data=request.data, context={'request': request})
-    #     user.is_valid(raise_exception=True)
-    #     user.update()
-    #     return Response({'user': user})

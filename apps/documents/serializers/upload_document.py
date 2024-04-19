@@ -1,15 +1,15 @@
 from django.core.files.storage import FileSystemStorage
 from rest_framework import serializers
 
-from apps.documents.models import Document
 from apps.cars.models import Car
+from apps.documents.models import Document
 
 
 class UploadDocumentSerializer(serializers.ModelSerializer):
     file = serializers.FileField(write_only=True)
     name = serializers.CharField(required=False)
     car = serializers.PrimaryKeyRelatedField(queryset=Car.objects.all())
-    
+
     class Meta:
         model = Document
         fields = ["name", "file", "car", "document_type", "uploaded_on"]
@@ -20,5 +20,10 @@ class UploadDocumentSerializer(serializers.ModelSerializer):
         request_file = validated_data["file"]
         file = fs.save(request_file.name, request_file)
         file_url = fs.url(file)
-        document = Document.objects.create(name=file, file=file_url, car=car, document_type=validated_data["document_type"])
+        document = Document.objects.create(
+            name=file,
+            file=file_url,
+            car=car,
+            document_type=validated_data["document_type"],
+        )
         return document

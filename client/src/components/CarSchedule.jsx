@@ -42,9 +42,8 @@ export default function CarSchedule() {
       });
   }, [id]);
 
-  console.log(schedules);
   return (
-    <ol className="border-l border-neutral-300 dark:border-neutral-500 md:flex md:justify-center md:gap-6 md:border-l-0 md:border-t">
+    <ol className="border-l border-neutral-300 dark:border-neutral-500 md:flex md:justify-center md:gap-6 md:border-l-0 md:border-t m-4">
       {schedules.length > 0 &&
         schedules.map((schedule_stage) => (
           <li>

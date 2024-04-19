@@ -1,4 +1,5 @@
 from django.core.files.storage import FileSystemStorage
+from drf_spectacular.utils import extend_schema
 from rest_framework.parsers import FormParser
 from rest_framework.parsers import MultiPartParser
 from rest_framework.response import Response
@@ -9,6 +10,7 @@ from apps.images.serializers.list_image import ListImageSerializer
 from apps.images.serializers.upload_delete_image import UploadDeleteImageSerializer
 
 
+@extend_schema(tags=["Images"])
 class ImageViewSet(ModelViewSet):
     parser_classes = (MultiPartParser, FormParser)
     serializer_class = UploadDeleteImageSerializer

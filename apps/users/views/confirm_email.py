@@ -1,3 +1,4 @@
+from drf_spectacular.utils import extend_schema
 from rest_framework import generics
 from rest_framework import status
 from rest_framework.permissions import AllowAny
@@ -6,6 +7,7 @@ from rest_framework.response import Response
 from apps.users.serializers.confirm_email import ConfirmEmailSerializer
 
 
+@extend_schema(tags=["Users"])
 class EmailConfirmationView(generics.GenericAPIView):
     permission_classes = [
         AllowAny,

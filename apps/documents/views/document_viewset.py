@@ -1,5 +1,6 @@
 from django.conf import settings
 from django.core.files.storage import FileSystemStorage
+from drf_spectacular.utils import extend_schema
 from rest_framework import status
 from rest_framework.parsers import FormParser
 from rest_framework.parsers import MultiPartParser
@@ -11,6 +12,7 @@ from apps.documents.serializers.list_document import ListDocumentSerializer
 from apps.documents.serializers.upload_document import UploadDocumentSerializer
 
 
+@extend_schema(tags=["Documents"])
 class DocumentViewSet(ModelViewSet):
     parser_classes = (MultiPartParser, FormParser)
     serializer_class = UploadDocumentSerializer
@@ -32,7 +34,6 @@ class DocumentViewSet(ModelViewSet):
             case _:
                 return super().get_queryset()
 
-
     def retrieve(self, request, *args, **kwargs):
         queryset = self.get_queryset().order_by("document_type")
         document_type = self.request.query_params.get("document_type")
@@ -42,7 +43,7 @@ class DocumentViewSet(ModelViewSet):
 
         serializer = ListDocumentSerializer(queryset, many=True)
         return Response(serializer.data)
-    
+
     def perform_destroy(self, instance):
         fs = FileSystemStorage()
         fs.delete(instance.name)

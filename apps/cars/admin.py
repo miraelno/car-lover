@@ -1,4 +1,5 @@
 from typing import Any
+
 from django.contrib import admin
 
 from apps.cars.models import Car

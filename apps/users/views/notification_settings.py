@@ -1,10 +1,13 @@
-
-from rest_framework.views import APIView
-from rest_framework.response import Response
+from drf_spectacular.utils import extend_schema
 from rest_framework import status
+from rest_framework.response import Response
+from rest_framework.views import APIView
+
 from apps.users.models import NotificationSettings
 from apps.users.serializers.notification_settings import NotificationSettingsSerializer
 
+
+@extend_schema(tags=["Users"])
 class NotificationSettingsAPIView(APIView):
 
     def get(self, request):
@@ -16,7 +19,9 @@ class NotificationSettingsAPIView(APIView):
     def put(self, request):
         user = request.user
         notification_settings = NotificationSettings.objects.get_or_create(user=user)[0]
-        serializer = NotificationSettingsSerializer(notification_settings, data=request.data)
+        serializer = NotificationSettingsSerializer(
+            notification_settings, data=request.data
+        )
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)

@@ -17,7 +17,7 @@ export default function MainPage() {
   const {subpage} = useParams()
 
   return (
-    <div className="mt-10 flex gap-3 ">
+    <div className="m-10 flex gap-3 ">
       {cars.length > 0 &&
         cars.map((car) => {
           return (

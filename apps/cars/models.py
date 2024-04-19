@@ -14,7 +14,9 @@ class Car(models.Model):
     number = models.CharField(_("number"), max_length=20)
     mileage = models.CharField(_("mileage"), max_length=20, blank=True, default="")
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="cars")
-    stage = models.ForeignKey(Stage, on_delete=models.SET_NULL, null=True, related_name="stage")
+    stage = models.ForeignKey(
+        Stage, on_delete=models.SET_NULL, null=True, related_name="stage"
+    )
 
     def __str__(self):
         return self.number

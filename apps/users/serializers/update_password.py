@@ -17,8 +17,6 @@ class UpdatePasswordSerializer(serializers.Serializer):
         write_only=True,
     )
 
-    # TODO add 'repeat new password' field
-
     def validate_old_password(self, value):
         user = self.context["request"].user
         if not user.check_password(value):

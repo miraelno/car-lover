@@ -1,10 +1,11 @@
+from drf_spectacular.utils import extend_schema
 from rest_framework import generics
-from rest_framework.response import Response
 
 from apps.cars.models import Car
 from apps.cars.serializers.car_info import CarInformationSerializer
 
 
+@extend_schema(tags=["Cars"])
 class CarInfoRetrieveUpdateAPIView(generics.RetrieveUpdateAPIView):
     serializer_class = CarInformationSerializer
 
@@ -14,6 +15,7 @@ class CarInfoRetrieveUpdateAPIView(generics.RetrieveUpdateAPIView):
         return Car.objects.filter(id=car_id, user_id=user)
 
 
+@extend_schema(tags=["Cars"])
 class CarInfoListAPIView(generics.ListAPIView):
     serializer_class = CarInformationSerializer
 

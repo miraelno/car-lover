@@ -1,10 +1,11 @@
 from typing import Any
+
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from django.contrib.auth.models import Group
 
-from apps.users.models import User
 from apps.users.models import NotificationSettings
+from apps.users.models import User
 
 admin.site.unregister(Group)
 
@@ -16,19 +17,19 @@ class NotificationsSettingsInline(admin.TabularInline):
     verbose_name_plural = "Notification settings"
     can_delete = False
     extra = 0
-    
+
     def has_add_permission(self, request, obj) -> bool:
         return False
 
     def has_change_permission(self, request, obj=None) -> bool:
         return False
 
+
 class CustomUserAdmin(UserAdmin):
     list_display = ["email"]
     ordering = ["email"]
-    
 
-    #taken from super
+    # taken from super
     fieldsets = (
         (None, {"fields": ["password"]}),
         # (("User info"), {"fields": ("first_name","last_name")})
@@ -54,10 +55,11 @@ class CustomUserAdmin(UserAdmin):
             },
         ),
     )
-    #taken from super
+    # taken from super
     add_fieldsets = (
         (None, {"classes": ("wide",), "fields": ("email", "password1", "password2")}),
     )
     inlines = [NotificationsSettingsInline]
+
 
 admin.site.register(User, CustomUserAdmin)
