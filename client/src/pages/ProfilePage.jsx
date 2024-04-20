@@ -116,7 +116,7 @@ export default function ProfilePage() {
   }
 
   return (
-    <div>
+    <div className='mt-4 mb-4 flex justify-around'>
       <TEAlert className='m-4 z-10 text-center' dismiss autohide delay={5000} open={open} setOpen={setOpen}>
         <strong>Saved!</strong>
         <span className="ml-1">
